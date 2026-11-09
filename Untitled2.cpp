@@ -71,7 +71,7 @@ bai_xe::bai_xe(int ma, char kt) : ma_bai(ma), kich_thuoc(kt), co1(false), co2(fa
 int bai_xe::lay_ma() const { return ma_bai; }
 
 bool bai_xe::them(phuong_tien v) {
-    int cap = (kich_thuoc == 'S') ? 1 : (kich_thuoc == 'M') ? 2 : 3;
+    int cap = (kich_thuoc == 'S') ? 1 : ((kich_thuoc == 'M') ? 2 : 3);
     if (cap >= 1 && !co1) { pt1 = v; co1 = true; return true; }
     if (cap >= 2 && !co2) { pt2 = v; co2 = true; return true; }
     if (cap >= 3 && !co3) { pt3 = v; co3 = true; return true; }
